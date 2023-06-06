@@ -10,15 +10,17 @@ function onSubmit(event) {
 
     if (email.value === "" || password.value === "") {
 
-       alert("Всі поля повинні бути заповнені!");
+     return  alert("Всі поля повинні бути заповнені!");
 
-    } else {
+    } 
 
         const data = {
             email: email.value,
             password: password.value
         }
 
-        console.log(data)
-    }
+    console.log(data)
+    event.currentTarget.reset();
 }
+    
+

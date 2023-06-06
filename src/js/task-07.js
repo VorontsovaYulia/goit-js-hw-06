@@ -5,6 +5,6 @@ inputEl.addEventListener("input", onInput);
 
 function onInput(event) {
 
-  spanEl.setAttribute("style", `font-size: ${event.currentTarget.value}px`)
+  spanEl.style.fontSize = `${event.currentTarget.value}px`
 
 }

@@ -6,7 +6,7 @@ inputEl.addEventListener("input", onInput);
 function onInput(event) {
 
     if (event.currentTarget.value !== "" ) {
-    spanEl.textContent = event.currentTarget.value
+        spanEl.textContent = event.currentTarget.value.trim();
     } else {
         spanEl.textContent = "Anonymous";
 }
