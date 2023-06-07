@@ -4,7 +4,6 @@ const buttonDestroy = document.querySelector("button[data-destroy]");
 const divEl = document.querySelector("#boxes");
 let arrayDiv = [];
 
-
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
@@ -26,13 +25,21 @@ function onInput(event) {
  
 function onBtnCreate(event) {
 
+  destroyBoxes();
   createBoxes(amount)
   
 }
 
 function onBtnDestroy(event) {
   
+  destroyBoxes()
+  inputEl.value = ""
+  amount = 0;
+}
+
+function destroyBoxes() {
   divEl.innerHTML = "";
+  
 }
 
 function createBoxes(param) {
